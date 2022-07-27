@@ -1,0 +1,22 @@
+:root {
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --acsent-text-color: #2196f3;
+    --slogan-text-color: #ffffff;
+    --page-color: #2f303a;
+    --aside-text-color: #e5e5e5;
+    --box-color: #f5f4fa;
+    --subtitle-text-color: #000000;
+    --contact-text-color: rgba(255, 255, 255, 0.6);
+    --title-hover-color: #188CE8;
+    --fetcher-title-color: #EEEEEE;
+    --header-border-colors: #ECECEC;
+    --client-title-colors: #AFB1B8;
+  }
+  body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    color: var(--primary-text-color);
+    letter-spacing: 0.03em;
+  }

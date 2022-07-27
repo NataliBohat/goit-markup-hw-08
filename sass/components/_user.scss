@@ -1,0 +1,72 @@
+/*Наша команда*/
+
+.user {
+    background: var(--box-color);
+  }
+  .user__title {
+    @extend .title;
+  }
+  .user__list {
+    display: flex;
+    align-items: center;
+  }
+  .user__list .user__item + .user__item {
+    margin-left: 30px;
+  }
+  .user__item {
+    text-align: center;
+    width: 270px;
+    margin-right: auto;
+  
+    background: var(--slogan-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  .user__lead {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .user__uppertitle {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+  
+    color: var(--primary-text-color);
+  }
+  
+  .user__subtitle {
+    margin-top: 10px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.2;
+  
+    color: var(--secondary-text-color);
+  }
+  
+  /* оформлення іконок */
+  
+  .social-media {
+    display: flex;
+    justify-content: center;
+  }
+  .social-media__item:not(:last-child) {
+    margin-right: 10px;
+  }
+  
+  .social-media__link {
+    @extend .media;
+    color: var(--client-title-colors);
+    background-color: var(--slogan-text-color);
+  
+    &:hover,
+    &:focus {
+    color: var(--slogan-text-color);
+    background-color: var(--acsent-text-color);
+  }
+}
+  
+  .social-media__icon {
+    fill: currentColor;
+  }

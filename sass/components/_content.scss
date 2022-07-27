@@ -1,0 +1,47 @@
+/*Секція про нас*/
+
+.content__list {
+    display: flex;
+    align-items: center;
+  }
+  
+  .content__list .content__item {
+    width: 270px;
+  }
+  
+  .content__list .content__item + .content__item {
+   margin-left: 30px;
+  }
+  
+  .content__subtitle {
+    @extend .subtitle;
+    margin-top: 0;
+    margin-bottom: 0;
+  
+    color: var(--primary-text-color);
+  }
+  
+  .content__slogan {
+    margin-top: 10px;
+    line-height: 1.7;
+    color: var(--secondary-text-color);
+  }
+  
+  /*icon*/
+  
+  .content__media {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    margin-bottom: 30px;
+  
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+  
+    color: var(--primary-text-color);
+    background-color: var(--box-color);
+  }
+  .content__item:not(:last-child){
+    margin-right: 30px;
+  }
