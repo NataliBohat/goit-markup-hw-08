@@ -1,18 +1,54 @@
 /* герой*/
 
 .hero {
+    position: relative;
     max-width: 1600px;
-    height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 200px 0;
+    // height: 600px;
+    margin: 0 auto;
+    // padding: 200px 0;
+
+    background-color: var(--page-color);
     
-    background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-     url(../img/icon/Img.jpg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: auto auto;
-    background-color: var(--page-color);
+    background-size: cover;
+    
+    background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+     url(../../img/image/hero/header-img-mb.jpg);
+
+     @media (min-device-pixel-ratio: 2),
+     (-webkit-min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+     url(../../img/image/hero/header-img-1-mb.jpg); 
+     }
+
+     @media screen and (min-width:768px) {
+        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+     url(../../img/image/hero/header-img-tb.jpg);
+     }
+
+     @media (min-device-pixel-ratio: 2),
+     (-webkit-min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+     url(../../img/image/hero/header-img-1-tb.jpg); 
+     }
+
+     @media screen and (min-width:1200px) {
+        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+     url(../../img/image/hero/header-img-dt.jpg);
+     }
+
+     @media (min-device-pixel-ratio: 2),
+     (-webkit-min-device-pixel-ratio: 2),
+     (min-resolution: 192dpi),
+     (min-resolution: 2dppx) {
+        background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+     url(../../img/image/hero/header-img-1-dt.jpg); 
+     }
     }
     
     .hero__container{
