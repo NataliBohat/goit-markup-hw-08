@@ -1,77 +1,47 @@
 /*Секція про нас*/
-
-.content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  @media screen and (min-width: 768px) {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 94px;
-    padding-bottom: 94px;
-  }
-}
-
 .content__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.content__list .content__item {
-flex-basis: calc((100% - (30px * (var(--items)))) / var(--items));
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 30px;
 }
 
 .content__item {
-  // text-align: center;
-    // width: 270px;
-    // margin-right: auto;
-
-  @media screen and (min-width: 468px) {
-    --items: 1;
+  @media screen and (max-width: 768px) {
+  text-align: center;
   }
 
-  @media screen and (max-width: 1199px) {
-  --items: 2;
-}
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 30px)/2);
+  }
 
-@media screen and (min-width: 1200px) {
-  --items: 4;
-}
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 90px)/4);
+  }
 }
   
 .content__subtitle {
- @extend .subtitle;
-margin-top: 0;
-margin-bottom: 0;
+@extend .subtitle;
   
 color: var(--primary-text-color);
-
-@media screen and (min-width: 480px) {
-  justify-content: center;
-  align-items: center;
-}
 }
   
 .content__slogan {
- margin-top: 10px;
- line-height: 1.7;
- color: var(--secondary-text-color);
+line-height: 1.7;
+color: var(--secondary-text-color);
 }
   
-  /*icon*/
- .content__media {
-  display: flex;
-  width: 100%;
-  margin-bottom: 30px;
+/*icon*/
+.content__media {
+display: flex;
+width: 100%;
+height: 120px;
+margin-bottom: 30px;
   
-  align-items: center;
-  justify-content: center;
-  background-size: contain;
+align-items: center;
+justify-content: center;
+background-size: contain;
   
-  color: var(--primary-text-color);
-  background-color: var(--box-color);
-  }
+color: var(--primary-text-color);
+background-color: var(--box-color);
+}
