@@ -1,47 +1,77 @@
 /*Секція про нас*/
 
+.content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .content__list {
-    display: flex;
-    align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.content__list .content__item {
+flex-basis: calc((100% - (30px * (var(--items)))) / var(--items));
+}
+
+.content__item {
+  // text-align: center;
+    // width: 270px;
+    // margin-right: auto;
+
+  @media screen and (min-width: 468px) {
+    --items: 1;
   }
+
+  @media screen and (max-width: 1199px) {
+  --items: 2;
+}
+
+@media screen and (min-width: 1200px) {
+  --items: 4;
+}
+}
   
-  .content__list .content__item {
-    width: 270px;
-  }
+.content__subtitle {
+ @extend .subtitle;
+margin-top: 0;
+margin-bottom: 0;
   
-  .content__list .content__item + .content__item {
-   margin-left: 30px;
-  }
+color: var(--primary-text-color);
+
+@media screen and (min-width: 480px) {
+  justify-content: center;
+  align-items: center;
+}
+}
   
-  .content__subtitle {
-    @extend .subtitle;
-    margin-top: 0;
-    margin-bottom: 0;
-  
-    color: var(--primary-text-color);
-  }
-  
-  .content__slogan {
-    margin-top: 10px;
-    line-height: 1.7;
-    color: var(--secondary-text-color);
-  }
+.content__slogan {
+ margin-top: 10px;
+ line-height: 1.7;
+ color: var(--secondary-text-color);
+}
   
   /*icon*/
+ .content__media {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
   
-  .content__media {
-    display: flex;
-    width: 270px;
-    height: 120px;
-    margin-bottom: 30px;
+  align-items: center;
+  justify-content: center;
+  background-size: contain;
   
-    align-items: center;
-    justify-content: center;
-    background-size: contain;
-  
-    color: var(--primary-text-color);
-    background-color: var(--box-color);
-  }
-  .content__item:not(:last-child){
-    margin-right: 30px;
+  color: var(--primary-text-color);
+  background-color: var(--box-color);
   }

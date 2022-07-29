@@ -1,8 +1,12 @@
 /*Чем мы занимаемся*/
 
 .main {
-    padding-top: 0;
-    }
+padding-top: 0;
+
+  @media screen and (max-width: 1200px){
+    display: none;
+  }
+}
   
   .main__title {
     @extend .title;

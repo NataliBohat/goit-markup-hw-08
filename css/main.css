@@ -13,6 +13,7 @@
   --fetcher-title-color: #EEEEEE;
   --header-border-colors: #ECECEC;
   --client-title-colors: #AFB1B8;
+  --items: 4;
 }
 
 body {
@@ -45,16 +46,25 @@ img {
 }
 
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
-
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
 }
 
 .link {
@@ -63,8 +73,8 @@ img {
 
 .title, .client__title, .user__title, .main__title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
   letter-spacing: 0.03em;
   margin-bottom: 50px;
@@ -540,27 +550,67 @@ img {
 }
 
 /*Секція про нас*/
+.content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .content {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .content__list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
 .content__list .content__item {
-  width: 270px;
+  -ms-flex-preferred-size: calc((100% - 30px * (var(--items))) / var(--items));
+      flex-basis: calc((100% - 30px * (var(--items))) / var(--items));
 }
 
-.content__list .content__item + .content__item {
-  margin-left: 30px;
+@media screen and (min-width: 468px) {
+  .content__item {
+    --items: 1;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .content__item {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content__item {
+    --items: 4;
+  }
 }
 
 .content__subtitle {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--primary-text-color);
+}
+@media screen and (min-width: 480px) {
+  .content__subtitle {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .content__slogan {
@@ -574,8 +624,7 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 270px;
-  height: 120px;
+  width: 100%;
   margin-bottom: 30px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -588,13 +637,14 @@ img {
   background-color: var(--box-color);
 }
 
-.content__item:not(:last-child) {
-  margin-right: 30px;
-}
-
 /*Чем мы занимаемся*/
 .main {
   padding-top: 0;
+}
+@media screen and (max-width: 1200px) {
+  .main {
+    display: none;
+  }
 }
 
 .main__list {
@@ -644,6 +694,27 @@ img {
 /*Наша команда*/
 .user {
   background: var(--box-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .user {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .user {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .user__title {
+    font-size: 36px;
+    line-height: 1.16;
+  }
 }
 
 .user__list {
@@ -653,10 +724,14 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 30px;
 }
 
-.user__list .user__item + .user__item {
-  margin-left: 30px;
+.user__list .user__item {
+  -ms-flex-preferred-size: calc((100% - 30px * (var(--items) - 1)) / var(--items));
+      flex-basis: calc((100% - 30px * (var(--items) - 1)) / var(--items));
 }
 
 .user__item {
@@ -667,6 +742,21 @@ img {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media screen and (max-width: 768px) {
+  .user__item {
+    --items: 1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .user__item {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .user__item {
+    --items: 4;
+  }
 }
 
 .user__lead {
@@ -719,6 +809,34 @@ img {
 }
 
 /*клиенты*/
+* {
+  outline: 1px solid red;
+}
+
+.client {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .client {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .client {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client__title {
+    font-size: 36px;
+    line-height: 1.16;
+  }
+}
+
 .client__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -726,10 +844,41 @@ img {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  gap: 30px;
+}
+@media screen and (max-width: 767px) {
+  .client__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 768px) {
+  .client__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-.client__item:not(:last-child) {
-  margin-right: 30px;
+.content__item {
+  text-align: center;
+  margin-right: auto;
+}
+@media screen and (max-width: 767px) {
+  .content__item {
+    --items: 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  .content__item {
+    --items: 3;
+    -ms-flex-preferred-size: calc((100% - 90px) / 3);
+        flex-basis: calc((100% - 90px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .content__item {
+    --items: 6;
+  }
 }
 
 .client__media {
@@ -918,9 +1067,27 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding-top: 60px;
   padding-bottom: 60px;
   background: var(--page-color);
+}
+@media screen and (min-width: 480px) {
+  .footer {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    max-width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer {
+    max-width: 1600px;
+  }
 }
 
 .footer-list__nav {

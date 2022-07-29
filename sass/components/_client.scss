@@ -1,16 +1,68 @@
 /*клиенты*/
+*{
+  outline: 1px solid red ;
+}
+.client {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 
 .client__title {
   @extend .title;
-    }
-  
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+   }
+  }
+    
   .client__list {
     display: flex;
     justify-content: center;
+    gap: 30px;
+
+    @media screen and (max-width: 767px) {
+     flex-wrap: wrap;;
+    }
+  
+    @media screen and (min-width: 768px) {
+    flex-wrap: wrap;
   }
-  .client__item:not(:last-child) {
-    margin-right: 30px;
   }
+  .client__list .client__item {
+    // flex-basis: calc((100% - (30px * (var(--items) - 1))) / var(--items));
+    // flex-basis: calc((100% - 90px)/3);
+  }
+
+  .content__item {
+    text-align: center;
+    // width: 170px;
+    margin-right: auto;
+
+    @media screen and (max-width: 767px) {
+      --items: 2;
+    }
+  
+    @media screen and (min-width: 768px) {
+    --items: 3;
+    flex-basis: calc((100% - 90px)/3);
+  }
+  
+  @media screen and (min-width: 1200px) {
+    --items: 6;
+  }
+  }
+
   .client__media {
     display: flex;
     width: 170px;

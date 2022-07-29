@@ -1,9 +1,21 @@
 .footer {
     display: flex;
+    justify-content: center;
     padding-top: 60px;
     padding-bottom: 60px;
   
     background: var(--page-color);
+
+    @media screen and (min-width: 480px) {
+     max-width: 480px;
+      }
+    
+      @media screen and (min-width: 768px) {
+      max-width: 768px;
+      }
+      @media screen and (min-width: 1200px) {
+        max-width: 1600px;
+      }
   }
   
   .footer-list__nav {
