@@ -4,12 +4,12 @@
 }
 .header {
 height: 60px;
-// min-height: 81px;
-// font-weight: 500;
-// line-height: 1.14;
-// letter-spacing: 0.02em;
+min-height: 81px;
+font-weight: 500;
+line-height: 1.14;
+letter-spacing: 0.02em;
     
-// border-bottom: 1px solid var(--header-border-colors);
+border-bottom: 1px solid var(--header-border-colors);
 }
 .header__conteiner {
   display: flex;
@@ -17,95 +17,117 @@ height: 60px;
 } 
 .header__nav{
   display: none;
-//  display: flex;
-//  align-items: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    }
 }
     
-//     .header__list {
-//     display: flex;
-//     margin-left: 93px;
-//     }
-//     .header__list .header__item + .header__item {
-//       margin-left: 50px;
-//     }
+.header__list {
+display: flex;
+margin-left: 93px;
+}
+.header__list .header__item + .header__item {
+ margin-left: 50px;
+}
     
-//     .header__link {
-//       display: block;
-//       position: relative;
+.header__link {
+display: block;
+position: relative;
     
-//       padding-top: 32px;
-//       padding-bottom: 32px;
-//       font-weight: 500;
-//       font-size: 14px;
+padding-top: 32px;
+padding-bottom: 32px;
+font-weight: 500;
+font-size: 14px;
     
-//       line-height: 1.14;
-//       letter-spacing: 0.02em;
-//       color: var(--primary-text-color);
+line-height: 1.14;
+letter-spacing: 0.02em;
+color: var(--primary-text-color);
     
-//       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-//       &:hover,
-//       &:focus {
-//         color: var(--acsent-text-color);
-//       }
+&:hover,
+&:focus {
+color: var(--acsent-text-color);
+}
       
-//     }
+}
     
-//      .current {
-//       color: var(--acsent-text-color);
+.current {
+color: var(--acsent-text-color);
 
-//       &::after {
-//         content: "";
-//         position: absolute;
-//         display: block;
+&::after {
+content: "";
+position: absolute;
+display: block;
       
-//         width: 100%;
-//         height: 4px;
-//         bottom: -1px;
+width: 100%;
+height: 4px;
+bottom: -1px;
       
-//         border-radius: 2px;
-//         background-color: var(--acsent-text-color);
-//       }
-//     } 
+border-radius: 2px;
+background-color: var(--acsent-text-color);
+}
+} 
     
-//     .meta {
-//       display: flex;
-//       margin-left: auto;
+.meta {
+display: flex;
 
-//       &__items:hover,
-//       &__items:focus {
-//     color: var(--acsent-text-color);
-//     }
-//     }
-//     .meta .meta__items + .meta__items {
-//       margin-left: 50px;
-//     }
+
+&__items:hover,
+&__items:focus {
+color: var(--acsent-text-color);
+}
+
+@media screen and (max-width: 767px) {
+  display: none;
+
+}
+
+@media screen and (min-width: 768px) {
+  width: 768px;
+  flex-direction: column;
+  display: inline;
+  // flex-wrap: wrap;
+  margin-left: 96px;
+}
+
+@media screen and (min-width: 1200px) {
+  margin-right: auto;
+  display: block;
+
+}
+}
+// .meta .meta__items + .meta__items {
+// margin-left: 50px;
+// }
     
-//     .meta__contact {
-//       display: flex;
+.meta__contact {
+display: flex;
     
-//       align-items: center;
-//       color: var(--secondary-text-color);
+align-items: center;
+padding-bottom: 10px;
+color: var(--secondary-text-color);
       
-//       transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-//       &:hover,
-//       &:focus {
-//       color: currentColor;
-//     }
-//   }
-//     /*icon*/
+&:hover,
+&:focus {
+color: currentColor;
+}
+}
+/*icon*/
     
-//     .meta__icon{
-//       display: inline-block;
-//       margin-right: 10px;
-//       transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-//       background-size: contain;
-//       fill: currentColor; 
+.meta__icon{
+display: inline-block;
+margin-right: 10px;
+transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+background-size: contain;
+fill: currentColor; 
 
-//       &:hover,
-//       &:focus{
-//       fill: currentColor;
-//     } 
-//   }
+&:hover,
+&:focus{
+fill: currentColor;
+} 
+}
   

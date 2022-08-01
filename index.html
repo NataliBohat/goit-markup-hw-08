@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
@@ -194,17 +194,12 @@
           <h2 hidden>Про нас</h2>
           <ul class="content__list list">
             <li class="content__item">
-              <a
-                class="content__media link"
-                href="#"
-                target="_blank"
-                rel="noopeer noreferent"
-                aria-label="vector"
-              >
+              <a class="content__media">
                 <svg class="content__icon" width="70" height="70">
                   <use href="./img/icons.svg#icon-vector"></use>
                 </svg>
               </a>
+                
               <h3 class="content__subtitle">Внимание к деталям</h3>
               <p class="content__slogan">
                 Идейные соображения, а также начало повседневной работы по
@@ -212,17 +207,10 @@
               </p>
             </li>
             <li class="content__item">
-              <a
-                class="content__media link"
-                href="#"
-                target="_blank"
-                rel="noopeer noreferent"
-                aria-label="time"
-              >
-                <svg class="content__icon" width="70" height="70">
-                  <use href="./img/icons.svg#icon-time"></use>
-                </svg>
-              </a>
+              <a class="content__media"><svg class="content__icon" width="70" height="70">
+                <use href="./img/icons.svg#icon-time"></use>
+              </svg></a>
+              
               <h3 class="content__subtitle">Пунктуальность</h3>
               <p class="content__slogan">
                 Задача организации, в особенности же рамки и место обучения
@@ -230,17 +218,10 @@
               </p>
             </li>
             <li class="content__item">
-              <a
-                class="content__media link"
-                href="#"
-                target="_blank"
-                rel="noopeer noreferent"
-                aria-label="comp"
-              >
-                <svg class="content__icon" width="70" height="70">
-                  <use href="./img/icons.svg#icon-comp"></use>
-                </svg>
-              </a>
+              <a class="content__media"><svg class="content__icon" width="70" height="70">
+                <use href="./img/icons.svg#icon-comp"></use>
+              </svg></a>
+                
               <h3 class="content__subtitle">Планирование</h3>
               <p class="content__slogan">
                 Равным образом консультация с широким активом в значительной
@@ -248,17 +229,10 @@
               </p>
             </li>
             <li class="content__item">
-              <a
-                class="content__media link"
-                href="#"
-                target="_blank"
-                rel="noopeer noreferent"
-                aria-label="astronavt"
-              >
-                <svg class="content__icon" width="70" height="70">
-                  <use href="./img/icons.svg#icon-astronaut"></use>
-                </svg>
-              </a>
+              <a class="content__media"><svg class="content__icon" width="70" height="70">
+                <use href="./img/icons.svg#icon-astronaut"></use>
+              </svg></a>
+                
               <h3 class="content__subtitle">Современные технологии</h3>
               <p class="content__slogan">
                 Значимость этих проблем настолько очевидна, что реализация
@@ -267,7 +241,7 @@
             </li>
           </ul>
         </div>
-      </section> -->
+      </section>
       <!--Чем мы занимаемся-->
       <section class="main section">
         <div class="container">
@@ -728,9 +702,9 @@
             class="logo link"
             href="https://github.com/NataliBohat/goit-markup-hw-01."
             lang="ru"
-            >Web<span class="logo__thumb link">Studio</span></a
-          >
-          <address>
+            >Web<span class="logo__thumb link">Studio</span>
+          </a>
+          <address class="footer-address">
             <ul class="footer-list">
               <li class="footer-list__item list">
                 <a
@@ -755,7 +729,7 @@
           </address>
         </div>
         <div class="sidebar">
-          <span class="sidebar__title"><strong>присоединяйтесь</strong></span>
+          <strong class="sidebar__title">присоединяйтесь</strong>
           <ul class="sidebar__list list">
             <li class="sidebar__item">
               <a
@@ -811,9 +785,9 @@
             </li>
           </ul>
         </div>
-          <form class="footer-form">
+          <div class="footer-form">
             <b class="footer-form__title">Подпишитесь на рассылку</b>
-            <div class="footer-form__field">
+            <form class="footer-form__field">
               <label class="footer-form__label">
                 <input
                 class="footer-form__input"
@@ -827,8 +801,8 @@
                   <use href="./img/symbol-defs.svg#icon-fly"></use>
                 </svg>
               </button>
-            </div>
-          </form>
+            </form>
+          </div>
       </div>
     </footer>
     <script src="./js/modal.js"></script>
