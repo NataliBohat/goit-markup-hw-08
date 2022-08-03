@@ -1,132 +1,127 @@
 /*Секція хедер*/
-*{
-  outline: 1px solid red;
-}
-
-// // .header__conteiner {
-// //   display: flex;
-// //   align-items: center;
-// // }    
-
 .header {
-  min-height: 81px;
-  font-weight: 500;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
+    min-height: 81px;
+    font-weight: 500;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    
+    border-bottom: 1px solid var(--header-border-colors);
+    }
   
-  border-bottom: 1px solid var(--header-border-colors);
-  }
-  .header__logo{
-    position: absolute;
-    margin-top: 24px;
-  }
-  .header__nav{
-    // display: none;
-    display: flex;
-    align-items: center;
-
-//  @media screen and (min-width: 768px) {
-// display: flex;
-//   align-items: center;
-// }
-  }
-  
-  .header__list {
+  .header__conteiner{
   display: flex;
-  margin-left: auto;
+  align-items: center;
   }
-  .header__list .header__item + .header__item {
+  
+  .header__nav{
+    @media screen and (max-width: 767px) {
+    display: none;
+    }
+  }
+    
+  .header__list {
+    display: flex;
+    margin-left: 93px;
+  }
+  
+    .header__list .header__item + .header__item {
     margin-left: 50px;
   }
   
+    
   .header__link {
     display: block;
     position: relative;
-  
+    
     padding-top: 32px;
     padding-bottom: 32px;
     font-weight: 500;
     font-size: 14px;
-  
+    
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
-  
+    
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
+  
+      &:hover,
+      &:focus {
+        color: var(--acsent-text-color);
+      }
+      
+    }
+    
+     .current {
       color: var(--acsent-text-color);
-    }
-    
-  }
   
-   .current {
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+      
+        width: 100%;
+        height: 4px;
+        bottom: -1px;
+      
+        border-radius: 2px;
+        background-color: var(--acsent-text-color);
+      }
+    } 
+    
+    .meta {
+      display: none;
+
+      &__items:hover,
+      &__items:focus {
     color: var(--acsent-text-color);
-
-    &::after {
-      content: "";
-      position: absolute;
-      display: block;
-    
-      width: 100%;
-      height: 4px;
-      bottom: -1px;
-    
-      border-radius: 2px;
-      background-color: var(--acsent-text-color);
+  }
+  
+  @media screen and (min-width: 768px) {
+  margin-left: auto;
+  display: block;
+  }
+  
+  @media screen and (min-width: 1200px) {
+  display: flex;
+  margin-left: auto;
+  }
+}
+  
+    .meta__items {
+    @media screen and (min-width: 768px) {
+    margin-bottom: 10px;
     }
-  } 
-  
-  .meta {
-    // display: flex;
 
-    &__items:hover,
-    &__items:focus {
-  color: var(--acsent-text-color);
-  }
-
-  
-@media screen and (min-width: 768px) {
-margin-left: 96px;
-display: block;
-}
-
-@media screen and (min-width: 1200px) {
-display: flex;
-margin-left: auto;
-// //  flex-direction: row;
-}
-  }
-  
-  .meta .meta__items + .meta__items {
-    margin-left: 50px;
-  }
-  
-  .meta__contact {
-    display: flex;
-  
-    align-items: center;
-    color: var(--secondary-text-color);
+    @media screen and (min-width: 1200px) {
+        margin-left: 50px;
+    }
+    }
     
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-    color: currentColor;
-  }
-}
-  /*icon*/
+    .meta__contact {
+      display: flex;
+    
+      align-items: center;
+      color: var(--secondary-text-color);
+      
+      transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
-  .meta__icon{
-    display: inline-block;
-    margin-right: 10px;
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    background-size: contain;
-    fill: currentColor; 
-
-    &:hover,
-    &:focus{
-    fill: currentColor;
+      &:hover,
+      &:focus {
+      color: currentColor;
+    }
+  }
+    /*icon*/
+    
+    .meta__icon{
+      display: inline-block;
+      margin-right: 10px;
+      transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      background-size: contain;
+      fill: currentColor; 
+  
+      &:hover,
+      &:focus{
+      fill: currentColor;
+    } 
   } 
-} 
+  

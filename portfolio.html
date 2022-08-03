@@ -17,47 +17,88 @@
   <body>
     <!--Секція хедер-->
     <header class="header">
-      <nav class="container header__nav">
+      <div class="header__conteiner container"> 
         <a class="logo link" href="index.html" lang="ru">
-          Web<span class="logo__accent link">Studio</span></a
-        >
+        Web<span class="logo__accent link">Studio</span>
+      </a>
+      <button class="mobile__btn" type="button" data-menu-button>
+        <svg class="mobile__btn-icon" width="40" height="40">
+          <use class="mobile__btn-menu" href="./img/icons.svg#icon-menu_40px"></use>
+          <use class="mobile__btn-close"href="./img/icons.svg#icon-close_40px"></use>
+        </svg>
+      </button>
+         <!--мобильне меню-->
+     <div class="mobile-menu" data-menu>
+      <ul class="mobile-menu__nav list">
+    <li class="mobile-menu__nav-item">
+      <a class="mobile-menu__link link" href="index.html">Студія</a>
+    </li>
+    <li class="mobile-menu__nav-item">
+      <a class="mobile-menu__link current link" href="portfolio.html">Портфоліо</a>
+    </li>
+    <li class="mobile-menu__nav-item">
+      <a class="mobile-menu__link link" href="">Контакти</a>
+    </li>
+    </ul>
+      <ul class="mobile-menu__contacts list">
+        <li class="mobile-menu__contacts-item">
+          <a class="mobile-menu__tel link" href="">+38 096 111 11 11</a>
+        </li>
+        <li class="mobile-menu__contacts-item">
+          <a class="mobile-menu__mail link" href="">info@devstudio.com</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu__social list">
+        <li class="mobile-menu__social-item">
+          <a class="mobile-menu__social-icon link" href="">Instagram</a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a class="mobile-menu__social-icon link" href="">Twitter</a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a class="mobile-menu__social-icon link" href="">Facebook</a>
+        </li>
+        <li class="mobile-menu__social-item">
+          <a class="mobile-menu__social-icon link" href="">LinkedIn</a>
+        </li>
+      </ul>
+    </div>
+      <nav class="header__nav">
         <ul class="header__list list">
-          <li class="header__item">
-            <a class="header__link link" href="index.html">Студия</a>
-          </li>
-          <li class="header__item">
-            <a class="header__link link current" href="portfolio.html"
-              >Портфолио</a
-            >
-          </li>
-          <li class="header__item">
-            <a
-              class="header__link link"
-              href="https://github.com/NataliBohat/goit-markup-hw-01."
-              >Контакты</a
-            >
-          </li>
-        </ul>
-        <ul class="meta list">
-          <li class="meta__items">
-            <a class="meta__contact link" href="mailto:info@devstudio.com">
-              <svg class="meta__icon" width="16" height="12">
-                <use href="./img/icons.svg#icon-envelope"></use>
-              </svg>
-              <span lang="en">info@devstudio.com</span></a
-            >
-          </li>
-          <li class="meta__items">
-            <a class="meta__contact link" href="tel:+38 096 111 11 11">
-              <svg class="meta__icon" width="10" height="16">
-                <use href="./img/icons.svg#icon-tel"></use>
-              </svg>
-              <span lang="en">+38 096 111 11 11</span>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
+        <li class="header__item">
+          <a class="header__link link" href="index.html">Студия</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link link current" href="portfolio.html">Портфолио</a>
+        </li>
+        <li class="header__item">
+          <a
+            class="header__link link"
+            href="https://github.com/NataliBohat/goit-markup-hw-01."
+            >Контакты</a>
+        </li>
+      </ul>
+    </nav>
+      <ul class="meta list">
+        <li class="meta__items">
+          <a class="meta__contact link" href="mailto:info@devstudio.com">
+            <svg class="meta__icon" width="16" height="12">
+              <use href="./img/icons.svg#icon-envelope"></use>
+            </svg>
+            <span lang="en">info@devstudio.com</span></a
+          >
+        </li>
+        <li class="meta__items">
+          <a class="meta__contact link" href="tel:+38 096 111 11 11">
+            <svg class="meta__icon tel" width="10" height="16">
+              <use href="./img/icons.svg#icon-tel"></use>
+            </svg>
+            <span lang="en">+38 096 111 11 11</span>
+          </a>
+        </li>
+      </ul>
+  </div>
+</header>
     <main>
       <section class="section">
         <div class="container">
@@ -88,18 +129,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-1-dt.jpg 1x, ./img/portfolio img/grup-1-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-1-dt.jpg 1x, ./img/portfolio-img/grup-1-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-1-tb.jpg 1x, ./img/portfolio img/grup-1-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-1-tb.jpg 1x, ./img/portfolio-img/grup-1-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
-                     srcset="./img/portfolio img/grup-1-mb.jpg 1x, ./img/portfolio img/grup-1-1-mb.jpg"
+                     srcset="./img/portfolio-img/grup-1-mb.jpg 1x, ./img/portfolio-img/grup-1-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-1-mb.jpg"
+                    src="./img/portfolio-img/grup-1-mb.jpg"
                     alt="tehno"
                     width="450" height="294"/>
                   </picture>
@@ -123,18 +164,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-2-dt.jpg 1x, ./img/portfolio img/grup-2-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-2-dt.jpg 1x, ./img/portfolio-img/grup-2-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-2-tb.jpg 1x, ./img/portfolio img/grup-2-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-2-tb.jpg 1x, ./img/portfolio-img/grup-2-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
-                     srcset="./img/portfolio img/grup-2-mb.jpg 1x, ./img/portfolio img/grup-2-1-mb.jpg"
+                     srcset="./img/portfolio-img/grup-2-mb.jpg 1x, ./img/portfolio-img/grup-2-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-2-mb.jpg"
+                    src="./img/portfolio-img/grup-2-mb.jpg"
                     alt="poster"
                     width="450" height="294"/>
                   </picture>
@@ -158,18 +199,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-3-dt.jpg 1x, ./img/portfolio img/grup-3-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-3-dt.jpg 1x, ./img/portfolio-img/grup-3-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-3-tb.jpg 1x, ./img/portfolio img/grup-3-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-3-tb.jpg 1x, ./img/portfolio-img/grup-3-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
-                     srcset="./img/portfolio img/grup-3-mb.jpg 1x, ./img/portfolio img/grup-3-1-mb.jpg"
+                     srcset="./img/portfolio-img/grup-3-mb.jpg 1x, ./img/portfolio-img/grup-3-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-3-mb.jpg"
+                    src="./img/portfolio-img/grup-3-mb.jpg"
                     alt="seafood"
                     width="450" height="294"/>
                   </picture>
@@ -193,18 +234,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-4-dt.jpg 1x, ./img/portfolio img/grup-4-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-4-dt.jpg 1x, ./img/portfolio-img/grup-4-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-4-tb.jpg 1x, ./img/portfolio img/grup-4-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-4-tb.jpg 1x, ./img/portfolio-img/grup-4-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
-                     srcset="./img/portfolio img/grup-4-mb.jpg 1x, ./img/portfolio img/grup-4-1-mb.jpg"
+                     srcset="./img/portfolio-img/grup-4-mb.jpg 1x, ./img/portfolio-img/grup-4-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-4-mb.jpg"
+                    src="./img/portfolio-img/grup-4-mb.jpg"
                     alt="prime"
                     width="450" height="294"/>
                   </picture>
@@ -228,18 +269,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-5-dt.jpg 1x, ./img/portfolio img/grup-5-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-5-dt.jpg 1x, ./img/portfolio-img/grup-5-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-5-tb.jpg 1x, ./img/portfolio img/grup-5-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-5-tb.jpg 1x, ./img/portfolio-img/grup-5-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
-                     srcset="./img/portfolio img/grup-5-mb.jpg 1x, ./img/portfolio img/grup-5-1-mb.jpg"
+                     srcset="./img/portfolio-img/grup-5-mb.jpg 1x, ./img/portfolio-img/grup-5-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-5-mb.jpg"
+                    src="./img/portfolio-img/grup-5-mb.jpg"
                     alt="boxes"
                     width="450" height="294"/>
                   </picture>
@@ -263,18 +304,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-6-dt.jpg 1x, ./img/portfolio img/grup-6-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-6-dt.jpg 1x, ./img/portfolio-img/grup-6-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-6-tb.jpg 1x, ./img/portfolio img/grup-6-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-6-tb.jpg 1x, ./img/portfolio-img/grup-6-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
                      srcset="./img/portfolio img/grup-6-mb.jpg 1x, ./img/portfolio img/grup-6-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-6-mb.jpg"
+                    src="./img/portfolio-img/grup-6-mb.jpg"
                     alt="tehno"
                     width="450" height="294"/>
                   </picture>
@@ -298,18 +339,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-7-dt.jpg 1x, ./img/portfolio img/grup-7-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-7-dt.jpg 1x, ./img/portfolio-img/grup-7-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-7-tb.jpg 1x, ./img/portfolio img/grup-7-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-7-tb.jpg 1x, ./img/portfolio-img/grup-7-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
-                     srcset="./img/portfolio img/grup-7-mb.jpg 1x, ./img/portfolio img/grup-7-1-mb.jpg"
+                     srcset="./img/portfolio-img/grup-7-mb.jpg 1x, ./img/portfolio-img/grup-7-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-7-mb.jpg"
+                    src="./img/portfolio-img/grup-7-mb.jpg"
                     alt="borders"
                     width="450" height="294"/>
                   </picture>
@@ -333,18 +374,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-8-dt.jpg 1x, ./img/portfolio img/grup-8-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-8-dt.jpg 1x, ./img/portfolio-img/grup-8-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-8-tb.jpg 1x, ./img/portfolio img/grup-8-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-8-tb.jpg 1x, ./img/portfolio-img/grup-8-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
-                     srcset="./img/portfolio img/grup-8-mb.jpg 1x, ./img/portfolio img/grup-8-1-mb.jpg"
+                     srcset="./img/portfolio-img/grup-8-mb.jpg 1x, ./img/portfolio-img/grup-8-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-8-mb.jpg"
+                    src="./img/portfolio-img/grup-8-mb.jpg"
                     alt="edition"
                     width="450" height="294"/>
                   </picture>
@@ -368,18 +409,18 @@
                   <picture>
                     <source 
                      media="(min-width: 1200px)"
-                     srcset="./img/portfolio img/grup-9-dt.jpg 1x, ./img/portfolio img/grup-9-1-dt.jpg 2x"
+                     srcset="./img/portfolio-img/grup-9-dt.jpg 1x, ./img/portfolio-img/grup-9-1-dt.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(min-width: 768px)"
-                     srcset="./img/portfolio img/grup-9-tb.jpg 1x, ./img/portfolio img/grup-9-1-tb.jpg 2x"
+                     srcset="./img/portfolio-img/grup-9-tb.jpg 1x, ./img/portfolio-img/grup-9-1-tb.jpg 2x"
                      type="image/jpg" />
                      <source 
                      media="(max-width: 767px)"
-                     srcset="./img/portfolio img/grup-9-mb.jpg 1x, ./img/portfolio img/grup-9-1-mb.jpg"
+                     srcset="./img/portfolio-img/grup-9-mb.jpg 1x, ./img/portfolio-img/grup-9-1-mb.jpg"
                      type="image/jpg" />
                      <img
-                    src="./img/portfolio img/grup-9-mb.jpg"
+                    src="./img/portfolio-img/grup-9-mb.jpg"
                     alt="lab"
                     width="450" height="294"/>
                   </picture>

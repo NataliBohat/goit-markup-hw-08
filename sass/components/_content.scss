@@ -1,50 +1,67 @@
 /*Секція про нас*/
 .content__list {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-gap: 30px;
-}
-
-.content__item {
-  @media screen and (max-width: 768px) {
-    flex-basis: calc((100% - 30px)/1);
-  }
-
-  @media screen and (min-width: 768px) {
-    flex-basis: calc((100% - 30px)/2);
-  }
-
-  @media screen and (min-width: 1200px) {
-    flex-basis: calc((100% - 90px)/4);
-  }
-}
-  
-.content__subtitle {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 10px;
+  gap: 30px;
+}
 
-@extend .subtitle;
-color: var(--primary-text-color);
-}
+.content__subtitle {
+    @extend .subtitle;
+    margin-top: 0;
+    margin-bottom: 0;
   
-.content__slogan {
-line-height: 1.7;
-color: var(--secondary-text-color);
-}
+    color: var(--primary-text-color);
+
+    @media screen and (max-width: 767px) {
+    display: flex;
+    justify-content: center;
+    }
+  }
   
-/*icon*/
-.content__media {
-display: flex;
-width: 100%;
-height: 120px;
-margin-bottom: 30px;
+  .content__slogan {
+    margin-top: 10px;
+    line-height: 1.7;
+    color: var(--secondary-text-color);
+  }
   
-align-items: center;
-justify-content: center;
-background-size: contain;
+  /*icon*/
+  .content__media {
+    display: flex;
+    margin-bottom: 30px;
   
-color: var(--primary-text-color);
-background-color: var(--box-color);
-}
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+  
+    color: var(--primary-text-color);
+    background-color: var(--box-color);
+    height: 120px;
+
+    @media screen and (min-width: 768px) {
+    width: 354px;
+    height: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
+    @media screen and (min-width: 1200px) {
+    width: 270px;
+    height: 120px;
+    }
+  }
+
+  .content__item {
+    @media screen and (max-width: 768px) {
+    flex-basis: calc((100% - 30px)/1);
+    }
+  
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 60px)/2);
+      margin-bottom: 57px;
+    }
+  
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 90px)/4);
+    }
+  }

@@ -1,53 +1,54 @@
 /*Чем мы занимаемся*/
 
 .main {
-  padding-top: 0;
-
-  @media screen and (max-width: 1200px) {
-    display: none;
+    @media screen and (max-width: 1199px) {
+    display: none;    
+    }
+    
+    padding-top: 0;
+    }
+  
+  .main__title {
+    @extend .title;
   }
-}
-
-.main__title {
-  @extend .title;
-}
-.main__list {
-  display: flex;
-  align-items: center;
-}
-
-.main__thumb {
-  position: relative;
-}
-
-.main__thumb::before {
+  .main__list {
+    display: flex;
+    align-items: center;
+  }
+  
+  .main__thumb {
+    position: relative;
+  }
+  
+  .main__thumb::before {
   display: inline-block;
   position: absolute;
-  content: '';
-
+  content: "";
+  
   width: 370px;
   height: 70px;
   bottom: 0;
   left: 0;
-
+  
   background-color: rgba(47, 48, 58, 0.8);
   opacity: 1;
-}
-
-.main__list .main__thumb + .main__thumb {
-  margin-left: 30px;
-}
-.main__item {
-  width: 370px;
-  margin-right: auto;
-}
-
-.main__action {
-  @extend .subtitle;
-  position: absolute;
-  bottom: 27px;
-  left: 82px;
-  display: flex;
-
-  color: var(--slogan-text-color);
-}
+  }
+  
+  .main__list .main__thumb + .main__thumb {
+    margin-left: 30px
+  }
+  .main__item {
+    width: 370px;
+    margin-right:auto;
+  }
+  
+  .main__action {
+    @extend .subtitle;
+    position: absolute;
+    bottom: 27px;
+    left: 82px;;
+    display: flex;
+  
+   color: var(--slogan-text-color);
+  }
+  
