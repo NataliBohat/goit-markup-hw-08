@@ -1,7 +1,6 @@
 /* герой*/
 
 .hero {
-  // max-width: 480px;
   margin: 0 auto;
   padding: 200px 0;
 
@@ -15,7 +14,7 @@
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
-    url(../../img/image/hero/header-img-mb.jpg);
+    url(../img/image/hero/header-img-mb.jpg);
 
   @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
@@ -25,16 +24,15 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../img/image/hero/header-img-1-mb.jpg);
+      url(../img/image/hero/header-img-1-mb.jpg);
   }
 
   @media screen and (min-width: 768px) {
-    // max-width: 768px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../img/image/hero/header-img-tb.jpg);
+      url(../img/image/hero/header-img-tb.jpg);
   }
 
   @media (min-device-pixel-ratio: 2),
@@ -45,16 +43,15 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../img/image/hero/header-img-1-tb.jpg);
+      url(../img/image/hero/header-img-1-tb.jpg);
   }
 
   @media screen and (min-width: 1200px) {
-    // max-width: 1600px;
     background-image: linear-gradient(
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../img/image/hero/header-img-dt.jpg);
+      url(../img/image/hero/header-img-dt.jpg);
   }
 
   @media (min-device-pixel-ratio: 3),
@@ -65,7 +62,7 @@
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
-      url(../../img/image/hero/header-img-1-dt.jpg);
+      url(../img/image/hero/header-img-1-dt.jpg);
   }
 }
 .hero__container{
@@ -73,15 +70,10 @@
   margin-right: auto;
 
   text-align: center;
-  width: 360px;
-
-  @media screen and (min-width: 1200px) {
   width: 700px;
-  }
-  }
+}
   
   .hero__title {
-  margin-bottom: 40px;
   text-transform: uppercase;
   
   font-weight: 900;
@@ -90,21 +82,34 @@
   letter-spacing: 0.06em;
 
   color: var(--slogan-text-color);
+ 
 
+  margin-top: 0;
+  margin-bottom: 30px;
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media screen and (max-width: 479px) {
+      max-width: 100%;
+      overflow: hidden;
+  }
+  
   @media screen and (min-width: 1200px) {
-  font-size: 44px;
-  line-height: 1.34;
+      font-size: 44px;
+      width: 696px;
+      line-height: 1.36;
   }
-  }
+}
   
-  .hero__button {
+.hero__button {
   @extend .btn;
-  padding: 10px 32px;
-  text-decoration: none;
-  text-align: center;
+padding: 10px 32px;
+text-decoration: none;
+text-align: center;
   
-  &:hover,
-  &:focus {
-  background-color: var(--acsent-text-color);
-  }
+&:hover,
+&:focus {
+background-color: var(--acsent-text-color);
+}
 }

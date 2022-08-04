@@ -84,7 +84,7 @@
 
 .current {
   color: var(--acsent-text-color);
-
+@media screen and (min-width: 1200px) {
   &::after {
     content: '';
     position: absolute;
@@ -96,7 +96,9 @@
 
     border-radius: 2px;
     background-color: var(--acsent-text-color);
-  }
+  } 
+}
+
 }
 .mobile-menu__contacts-item:not(:last-child) {
   margin-bottom: 32px;

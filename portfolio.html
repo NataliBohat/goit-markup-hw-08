@@ -444,14 +444,15 @@
     </main>
     <footer class="footer">
       <div class="container footer__container">
-        <div class="footer__logo">
+        <div class="footer__wrap"> 
+          <div class="footer__logo">
           <a
             class="logo link"
             href="https://github.com/NataliBohat/goit-markup-hw-01."
             lang="ru"
-            >Web<span class="logo__thumb link">Studio</span></a
-          >
-          <address>
+            >Web<span class="logo__thumb link">Studio</span>
+          </a>
+          <address class="footer-address">
             <ul class="footer-list">
               <li class="footer-list__item list">
                 <a
@@ -476,7 +477,7 @@
           </address>
         </div>
         <div class="sidebar">
-          <span class="sidebar__title"><strong>присоединяйтесь</strong></span>
+          <strong class="sidebar__title">присоединяйтесь</strong>
           <ul class="sidebar__list list">
             <li class="sidebar__item">
               <a
@@ -531,10 +532,10 @@
               </a>
             </li>
           </ul>
-        </div>
-          <form class="footer-form">
+      </div></div>
+          <div class="footer-form">
             <b class="footer-form__title">Подпишитесь на рассылку</b>
-            <div class="footer-form__field">
+            <form class="footer-form__field">
               <label class="footer-form__label">
                 <input
                 class="footer-form__input"
@@ -548,9 +549,10 @@
                   <use href="./img/symbol-defs.svg#icon-fly"></use>
                 </svg>
               </button>
-            </div>
-          </form>
+            </form>
+          </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
